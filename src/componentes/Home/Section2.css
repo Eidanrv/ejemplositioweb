@@ -1,0 +1,43 @@
+#seccion2 {
+  background-color: #1e1e1e;
+  padding: 40px 0;
+}
+
+.section2-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: transparent; /* 🔸Evita fondo blanco */
+  border: none; /* 🔸Asegura que no haya borde blanco */
+  padding: 10px;
+}
+
+.card h3 {
+  color: rgb(236, 156, 141);
+  font-family: "Arial";
+  margin-top: 15px;
+}
+
+.img-home {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: all 0.8s ease;
+  margin: 10px 0;
+  box-shadow: none;
+  background-color: transparent; /* 🔸Asegura que la imagen no tenga fondo */
+}
+
+.img-home:hover {
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px #ec731e;
+  transform: rotate(360deg);
+}

@@ -1,0 +1,124 @@
+.platillo-container {
+  display: flex;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  height: 345px; /* 👈 Altura fija en escritorio */
+}
+
+.platillo-img {
+  width: 300px;
+  height: 100%; /* 👈 Fuerza que la imagen llene el alto del contenedor */
+  object-fit: cover; /* 👈 Recorta proporcionalmente para llenar el espacio */
+  border-radius: 10px 0 0 10px;
+}
+
+.platillo-info {
+  flex: 1;
+  padding: 10px 25px; /* Aumenta el padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detalle-cajas {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.ingredientes,
+.precio-cantidad {
+  background-color: #3c3c3c;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.ingredientes ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.precio-cantidad h4 {
+  margin-bottom: 10px;
+}
+
+.cantidad-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.cantidad-x {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ec731e;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cantidad-control button {
+  background-color: #ec731e;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancelar,
+.pedir {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancelar {
+  background-color: #555;
+  color: white;
+}
+
+.pedir {
+  background-color: #ec731e;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .platillo-container {
+    height: auto; /* 👈 Se adapta en móviles */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .platillo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .detalle-cajas {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

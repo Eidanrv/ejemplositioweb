@@ -1,0 +1,270 @@
+.App {
+  text-align: center;
+  font-family: "Prompt", sans-serif;
+  color: white;
+  background: linear-gradient(
+    30deg,
+    rgb(158, 83, 120),
+    rgb(111, 108, 107),
+    rgb(74, 77, 86),
+    rgb(87, 78, 78),
+    rgb(13, 13, 13)
+  );
+}
+
+.App-css {
+  height: 30vmin;
+  width: 150px;
+}
+
+.contenedor {
+  width: 100%;
+  margin: auto;
+  overflow: visible;
+}
+
+.boton1 {
+  background-color: #0b0300;
+  border: none;
+  color: white;
+  padding: 16px 25px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+  font-size: 16px;
+  opacity: 0.5;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.boton1:hover {
+  opacity: 1;
+}
+
+#boletin {
+  padding: 15px;
+  color: #ffffff;
+  background: #24282b;
+}
+#boletin h5 {
+  float: left;
+}
+#boletin form {
+  float: left;
+  margin-top: 15px;
+}
+#boletin input[type="email"] {
+  width: 400px;
+  height: 40px;
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+
+.formulario {
+  width: 100%;
+  height: 45px;
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+
+.res {
+  background-color: #1b13f0;
+  font-family: Verdana;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 16px;
+  opacity: 0.3;
+  border: none;
+  color: white;
+}
+
+/* ----------------------------- */
+/*        SECCIÓN/CARRUSEL      */
+/* ----------------------------- */
+
+.section1-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.img-button {
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  background: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.img-button:hover,
+.img-button:focus {
+  transform: scale(1.07);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+
+.img-button img {
+  display: block;
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-text {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-text h5 {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.item-text p {
+  margin: 0;
+  color: #555;
+}
+.carousel-img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 600px;
+  padding: 30px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}
+.carousel-background {
+  position: relative;
+  background-image: url("./imagenes/Fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px 0;
+  z-index: 0;
+}
+
+.carousel-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+  z-index: 1;
+}
+
+/* Reducción progresiva en pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-img {
+    max-width: 100%;
+    max-height: 350px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    max-height: 250px;
+    padding: 10px;
+  }
+}
+
+/* Responsive de sección */
+@media (max-width: 600px) {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img-button img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ----------------------------- */
+/*         CAJAS + FOOTER       */
+/* ----------------------------- */
+
+#cajas {
+  margin-top: 20px;
+}
+
+#cajas .caja {
+  float: left;
+  font-size: 15px;
+  text-align: justify;
+  width: 30%;
+  padding: 10px;
+  font-family: Verdana;
+}
+
+@media (max-width: 768px) {
+  header #marca,
+  header nav,
+  header nav li a,
+  #boletin h1,
+  #boletin form,
+  #cajas .caja,
+  article#main-col,
+  #boletin input[type="email"],
+  aside#lateral {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* ----------------------------- */
+/*        MENÚ + FIXES          */
+/* ----------------------------- */
+
+/* Asegura que el header esté por encima del carrusel */
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Asegura que el menú desplegable esté arriba */
+.nav {
+  z-index: 1001;
+}
+
+/* Estilo responsivo para carrusel */
+.carousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+/* Carrusel más bajo en pantallas pequeñas */
+@media (max-width: 600px) {
+  .carousel-img {
+    max-height: 300px;
+  }
+}
